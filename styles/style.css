@@ -33,6 +33,8 @@
 body {
   background-color: #000;
   color: white;
+  width: 100%;
+  margin: 0;
 }
 
 a {
@@ -69,11 +71,30 @@ img {
   text-align: left;
 }
 
+.hero_image::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 70%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(108, 88, 255, 0.45) 0%,
+    rgba(108, 88, 255, 0.2) 45%,
+    transparent 75%
+  );
+  filter: blur(50px);
+  z-index: 0;
+}
 .hero_image_perfil {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .subtitle {
@@ -194,7 +215,7 @@ img {
 }
 
 .card_image {
-  width: 100%;
+  width: 590px;
   height: 330px;
   object-fit: cover;
   display: block;
@@ -315,6 +336,15 @@ img {
     order: 2;
   }
 
+  .hero_image::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    left: 80%;
+    top: 30%;
+  }
+
   .hero_image {
     width: 220px;
     height: 300px;
@@ -339,6 +369,14 @@ img {
   }
 }
 
+.card_image {
+  width: 100%;
+  max-width: 688px;
+  height: 330px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 320px) {
   .hero {
     grid-template-columns: 1fr;
@@ -349,6 +387,15 @@ img {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .hero_image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 30%;
   }
 
   .hero_text_title {
@@ -363,6 +410,22 @@ img {
 
   .hero_text {
     order: 1;
+  }
+
+  .card_image {
+    width: 100%;
+    max-width: 280px;
+    height: 160px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .card::before {
+    height: 160px;
+  }
+
+  .card_links {
+    top: 120px;
   }
 
   .skills_title {
