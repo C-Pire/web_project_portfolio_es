@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
-    <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/normalize.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <main class="container">
       <!-- HERO -->
       <section class="hero">
         <div class="hero_text">
-          <h1>Mariana Hernández</h1>
+          <h1 class="hero_text_title">Mariana Hernández</h1>
           <p class="subtitle">
             Desarrolladora Full-Stack Junior | TypeScript, React, Node.js
           </p>
@@ -27,7 +26,6 @@
             por seguir aprendiendo, asumir nuevos retos y aprovechar
             oportunidades para crecer como desarrolladora.
           </p>
-
           <div class="hero_buttons">
             <a href="#" class="btn-link">Descargar CV</a>
             <a href="#" class="btn-link">GitHub</a>
@@ -35,37 +33,52 @@
           </div>
         </div>
         <div class="hero_image">
-          <img src="./images/hero.jpg" alt="Foto de perfil" />
+         <img class="hero_image_perfil" src="./images/hero.jpg" alt="Foto de perfil" />
         </div>
       </section>
 
       <!-- HABILIDADES -->
       <section class="skills">
-        <h2>Habilidades y herramientas</h2>
+        <h2 class="skills_title">Habilidades y herramientas</h2>
 
         <div class="skills_icons">
-          <img src="./images/HTML.png" alt="HTML" />
-          <img src="./images/CSS.png" alt="CSS" />
-          <img src="./images/JavaScript.svg" alt="JavaScript" />
-          <img src="./images/Group 2087326846.png" alt="Git" />
-          <img src="./images/GitHub.png" alt="GitHub" />
-          <img src="./images/ChatGPT.png" alt="ChatGPT" />
+          <img class="skills_icons_img" src="./images/HTML.png" alt="HTML" />
+          <img class="skills_icons_img" src="./images/CSS.png" alt="CSS" />
+          <img
+            class="skills_icons_img"
+            src="./images/JavaScript.svg"
+            alt="JavaScript"
+          />
+          <img
+            class="skills_icons_img"
+            src="./images/Group 2087326846.png"
+            alt="Git"
+          />
+          <img
+            class="skills_icons_img"
+            src="./images/GitHub.png"
+            alt="GitHub"
+          />
+          <img
+            class="skills_icons_img"
+            src="./images/ChatGPT.png"
+            alt="ChatGPT"
+          />
         </div>
       </section>
 
       <!-- PROYECTOS -->
       <section class="projects">
-        <h2>Proyectos destacados</h2>
+        <h2 class="projects_title">Proyectos destacados</h2>
         <div class="cards">
           <article class="card">
             <img class="card_image" src="./images/card1.png" />
             <div class="card_links">
-              <img src="./images/HTML.png" />
-              <img src="./images/CSS.png" />
+              <img class="card_links_img" src="./images/HTML.png" />
+              <img class="card_links_img" src="./images/CSS.png" />
             </div>
-            <div class="card_content"></div>
             <div class="card_content">
-              <h3>Página web de cafetería</h3>
+              <h3 class="card_content_title">Página web de cafetería</h3>
               <p>
                 Desarrollo de una landing page responsiva para una cafetería
                 siguiendo un brief de diseño. Incluye estructura semántica,
@@ -88,12 +101,12 @@
           <article class="card">
             <img class="card_image" src="./images/card2.png" alt="Proyecto" />
             <div class="card_links">
-              <img src="./images/JavaScript.svg" />
-              <img src="./images/React.png" />
+              <img class="card_links_img" src="./images/JavaScript.svg" />
+              <img class="card_links_img" src="./images/React.png" />
             </div>
             <div class="card_content">
-              <h3>Mi proyecto</h3>
-              <p>Descripción del proyecto.</p>
+              <h3 class="card_content_title">Mi proyecto</h3>
+              <p class="card_content_text">Descripción del proyecto.</p>
 
               <div class="links">
                 <a href="#" class="projects_link">
@@ -110,9 +123,9 @@
 
       <!-- CONTACTO -->
       <section class="contact">
-        <h2>Contacto</h2>
+        <h2 class="contact_title">Contacto</h2>
 
-        <p>student@tripleten.com</p>
+        <p class="contact_text">student@tripleten.com</p>
 
         <div class="socials">
           <a href="#" class="social_link">
