@@ -21,4 +21,4 @@ La página se adapta a diferentes tamaños de pantalla (escritorio, tablet y mó
 
 Puedes ver el proyecto en línea aquí:
 
-**https://github.com/C-Pire/web_project_portfolio_es**
+**https://c-pire.github.io/web_project_portfolio_es/**
