@@ -74,41 +74,17 @@ img {
   margin-top: 3rem;
   text-align: left;
 }
+
 .hero_image {
-  width: 100%;
-  max-width: 500px;
-  height: 100%;
-  max-height: 385px;
+  width: auto;
+  height: 500px;
   justify-self: end;
-  position: relative;
-  z-index: 1;
 }
-.hero_image::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  left: 70%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    rgba(108, 88, 255, 0.45) 0%,
-    rgba(108, 88, 255, 0.2) 45%,
-    transparent 75%
-  );
-  filter: blur(50px);
-  z-index: 0;
-}
+
 .hero_image_perfil {
-  width: 90%;
-  max-width: 500px;
-  height: 90%;
-  max-height: 385px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display: block;
-  position: relative;
-  z-index: 1;
 }
 
 .subtitle {
@@ -230,7 +206,7 @@ img {
 
 .card_image {
   width: 100%;
-  height: 100%;
+  height: 330px;
   object-fit: cover;
   display: block;
   background: linear-gradient(
@@ -241,8 +217,8 @@ img {
 }
 
 .card_image_button {
-  width: 40;
-  height: 40;
+  width: 40px;
+  height: 40px;
   opacity: 1;
   left: 132px;
   gap: 2rem;
@@ -251,6 +227,7 @@ img {
 .card_links {
   position: absolute;
   left: 16px;
+  top: 290px;
   display: flex;
   gap: 8px;
   z-index: 3;
@@ -285,24 +262,6 @@ img {
   position: relative;
 }
 
-.contact::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    rgba(108, 88, 255, 0.45) 0%,
-    rgba(108, 88, 255, 0.2) 45%,
-    transparent 75%
-  );
-  filter: blur(50px);
-  z-index: 0;
-}
-
 .contact_title {
   font-size: 2.2rem;
   color: white;
@@ -312,11 +271,11 @@ img {
 }
 
 .contact_text {
-  margin: 1rem 0 2rem;
   color: #7368ff;
   font-family: "OpenSans-Regular", sans-serif;
   position: relative;
   z-index: 1;
+  text-decoration: none;
 }
 
 .contact_text:hover {
@@ -327,6 +286,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  padding-top: 30px;
   padding-bottom: 40px;
   position: relative;
   z-index: 1;
@@ -347,22 +307,20 @@ img {
     order: 2;
   }
 
-  .hero_image {
-    width: 90%;
-    max-width: 280px;
-    height: 90%;
-    max-height: 216px;
-    justify-self: end;
-    position: relative;
+  .subtitle_separator {
+    display: none;
   }
 
-  .hero_image::before {
-    content: "";
-    position: absolute;
-    width: 60%;
-    height: 60%;
-    left: 80%;
-    top: 30%;
+  .subtitle_techs {
+    display: block;
+  }
+
+  .hero_image {
+    width: auto;
+    height: 360px;
+    justify-self: end;
+    position: relative;
+    order: 2;
   }
 
   .hero_image_perfil {
@@ -378,6 +336,7 @@ img {
   .skills_icons {
     justify-content: space-between;
   }
+
   .description {
     margin: auto;
   }
@@ -385,15 +344,15 @@ img {
   .cards {
     grid-template-columns: 1fr;
   }
-}
 
-.card_image {
-  width: 100%;
-  max-width: 688px;
-  height: 100%;
-  max-height: 330px;
-  object-fit: cover;
-  margin: 0 auto;
+  .card_image {
+    width: 100%;
+    max-width: 688px;
+    height: 100%;
+    max-height: 330px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (width <= 767px) {
@@ -410,15 +369,15 @@ img {
 
   .hero_image {
     order: -1;
-    width: 100%;
-    max-width: 280px;
-    height: 100%;
-    max-height: 280px;
+    width: 280px;
+    height: 280px;
     justify-self: center;
     overflow: hidden;
   }
 
   .hero_image_perfil {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -429,6 +388,7 @@ img {
   .subtitle {
     font-size: 1.1rem;
   }
+
   .hero_text_title {
     font-size: 2.5rem;
     margin-top: 1rem;
@@ -436,6 +396,14 @@ img {
 
   .hero_text {
     order: 1;
+  }
+
+  .subtitle_separator {
+    display: none;
+  }
+
+  .subtitle_techs {
+    display: block;
   }
 
   .card_image {
