@@ -35,10 +35,26 @@
 }
 
 body {
-  background-color: #000;
-  color: white;
-  width: 100%;
   margin: 0;
+  width: 100%;
+  color: #fff;
+
+  background-color: #000;
+
+  background-image:
+    radial-gradient(
+      circle at calc(70% + 10px) 10%,
+      rgba(109, 109, 255, 1) -20%,
+      rgba(97, 85, 255, 0.18) 10%,
+      rgba(97, 85, 255, 0.05) 40%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at calc(58% - 150px) 95%,
+      rgba(109, 109, 255, 1) -20%,
+      rgba(97, 85, 255, 0.12) 10%,
+      transparent 100%
+    );
 }
 
 a {
@@ -60,18 +76,18 @@ img {
 .hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  padding: 1rem 0;
+  gap: 30px;
+  padding: 16px 0;
   margin: auto;
 }
 
 .hero_text_title {
-  font-size: 4rem;
+  font-size: 72px;
   line-height: 0.9;
   font-weight: 800;
   font-family: "ArchivoBlack-Regular", sans-serif;
-  margin-bottom: 1rem;
-  margin-top: 3rem;
+  margin-bottom: 16px;
+  margin-top: 48px;
   text-align: left;
 }
 
@@ -89,10 +105,10 @@ img {
 
 .subtitle {
   color: #8d8d8d;
-  margin: 1rem 0;
+  margin: 16px 0;
   font-family: "OpenSans-Regular", sans-serif;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -100,23 +116,25 @@ img {
   text-align: left;
   font-family: "OpenSans-Regular", sans-serif;
   margin: auto;
-  font-size: 1.2rem;
+  font-size: 18px;
 }
 
 .hero_buttons {
   display: flex;
-  gap: 1rem;
-  margin-top: 3rem;
-  gap: 2rem;
+  gap: 16px;
+  margin-top: 48px;
+  gap: 32px;
   flex-wrap: wrap;
   font-family: "OpenSans-SemiBold", sans-serif;
 }
 
 .btn-link {
-  color: white;
-  border-bottom: 2px solid #6155ff;
-  padding-bottom: 5px;
-  transition: 0.3s;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 8px;
+
+  background: linear-gradient(90deg, #5a22c8 40%, #6b63ff 75%, #6b63ff 100%)
+    left bottom / 100% 3px no-repeat;
 }
 
 .btn-link:hover {
@@ -127,13 +145,13 @@ img {
 
 .skills {
   margin: auto;
-  padding: 1rem 0 2rem;
+  padding: 16px 0 32px;
   font-family: "ArchivoBlack-Regular", sans-serif;
 }
 
 .skills_title {
-  font-size: 2.5rem;
-  padding-bottom: 2rem;
+  font-size: 40px;
+  padding-bottom: 32px;
 }
 
 .skills_icons {
@@ -141,7 +159,7 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .skills_icons_img {
@@ -151,24 +169,24 @@ img {
 /* PROJECTS */
 
 .projects {
-  padding-bottom: 5rem;
+  padding-bottom: 60px;
   font-family: "ArchivoBlack-Regular", sans-serif;
 }
 
 .projects_title {
-  font-size: 2.5rem;
+  font-size: 40px;
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .projects_link {
   position: relative;
   overflow: hidden;
-  padding: 0.5rem;
+  padding: 8px;
 }
 
 .projects_link:hover {
@@ -178,7 +196,7 @@ img {
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 32px;
 }
 
 .card {
@@ -190,7 +208,7 @@ img {
 }
 
 .card .card_content {
-  padding: 1.5rem;
+  padding: 40px;
   font-family: "OpenSans-Regular", sans-serif;
 }
 
@@ -204,16 +222,26 @@ img {
   line-height: 1.6;
 }
 
+.card_media {
+  position: relative;
+}
+
 .card_image {
   width: 100%;
-  height: 330px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
-  background: linear-gradient(
-    to bottom 180deg,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  z-index: 1;
+  pointer-events: none;
 }
 
 .card_image_button {
@@ -221,26 +249,26 @@ img {
   height: 40px;
   opacity: 1;
   left: 132px;
-  gap: 2rem;
+  gap: 32px;
 }
 
 .card_links {
   position: absolute;
   left: 16px;
-  top: 290px;
   display: flex;
+  bottom: 16px;
   gap: 8px;
-  z-index: 3;
 }
 
 .card_links_img {
   width: 24px;
   height: 24px;
+  top: 100px;
 }
 
 .card_links a {
   color: #7368ff;
-  font-size: 0.9rem;
+  font-size: 14px;
 }
 
 .card::before {
@@ -249,7 +277,7 @@ img {
   left: 0;
   top: 0;
   width: 100%;
-  height: 330px;
+  max-height: 330px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
   z-index: 1;
   pointer-events: none;
@@ -263,7 +291,7 @@ img {
 }
 
 .contact_title {
-  font-size: 2.2rem;
+  font-size: 40px;
   color: white;
   font-family: "ArchivoBlack-Regular", sans-serif;
   position: relative;
@@ -285,7 +313,7 @@ img {
 .socials {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 32px;
   padding-top: 30px;
   padding-bottom: 40px;
   position: relative;
@@ -299,7 +327,7 @@ img {
 @media screen and (width <= 1023px) {
   .hero {
     grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
+    gap: 24px;
     align-items: start;
   }
 
@@ -330,7 +358,7 @@ img {
   }
 
   .hero_text_title {
-    font-size: 3rem;
+    font-size: 48px;
   }
 
   .skills_icons {
@@ -344,11 +372,8 @@ img {
   .cards {
     grid-template-columns: 1fr;
   }
-
   .card_image {
     width: 100%;
-    max-width: 688px;
-    height: 100%;
     max-height: 330px;
     object-fit: cover;
     margin: 0 auto;
@@ -364,7 +389,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 16px;
   }
 
   .hero_image {
@@ -382,16 +407,16 @@ img {
   }
 
   .description {
-    font-size: 1.1rem;
+    font-size: 14px;
   }
 
   .subtitle {
-    font-size: 1.1rem;
+    font-size: 14px;
   }
 
   .hero_text_title {
-    font-size: 2.5rem;
-    margin-top: 1rem;
+    font-size: 48px;
+    margin-top: 16px;
   }
 
   .hero_text {
@@ -408,35 +433,29 @@ img {
 
   .card_image {
     width: 100%;
-    max-width: 280px;
-    height: 100%;
-    max-height: 160px;
+    height: 280px;
     object-fit: cover;
     margin: 0 auto;
   }
 
   .card::before {
-    height: 160px;
-  }
-
-  .card_links {
-    top: 120px;
+    height: 280px;
   }
 
   .skills_title {
-    font-size: 1.7rem;
+    font-size: 40px;
   }
 
   .projects_title {
-    font-size: 1.7rem;
-    padding-bottom: 1rem;
+    font-size: 28px;
+    padding-bottom: 60px;
   }
 
   .skills_icons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 32px;
     justify-content: start;
-    padding-bottom: 1rem;
+    padding-bottom: 16px;
   }
 }
